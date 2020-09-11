@@ -3,5 +3,6 @@
     <h3 class="title"><%= poem.title %></h3>
     <div class="author"><%= poem.author%></div>
     <div class="lines"><%= poem.lines%></div>
+    <div class="tone"><%= ToneService.get_tone(poem.lines)%></div>
   </section>
 <%end %>
