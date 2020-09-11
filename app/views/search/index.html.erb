@@ -1,0 +1,7 @@
+<% @poems.take(10).each do |poem| %>
+  <section class="poem">
+    <h3 class="title"><%= poem.title %></h3>
+    <div class="author"><%= poem.author%></div>
+    <div class="lines"><%= poem.lines%></div>
+  </section>
+<%end %>

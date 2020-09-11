@@ -22,9 +22,9 @@ describe "User can visit root path" do
       expect(page).to have_css('.author')
       author = find('.author').text
       expect(author).not_to be_empty
-      expect(page).to have_css('.content')
-      content = find('.content').text
-      expect(content).not_to be_empty
+      expect(page).to have_css('.lines')
+      lines = find('.lines').text
+      expect(lines).not_to be_empty
       expect(page).to have_css('.tone')
       tone = find('.tone').text
       expect(tone).not_to be_empty
