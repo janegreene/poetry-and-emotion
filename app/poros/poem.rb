@@ -1,9 +1,10 @@
 class Poem
-  attr_reader :title, :author, :lines
-  def initialize(argument)
-    @title = argument[:title]
-    @author = argument[:author]
-    @lines = merge_lines(argument[:lines])
+  attr_reader :title, :author, :text, :linecount
+  def initialize(title, author, lines, linecount)
+    @title = title
+    @author = author
+    @text = merge_lines(lines)
+    @linecount = linecount
   end
   def self.get_poems(json)
     json.map do |poem|

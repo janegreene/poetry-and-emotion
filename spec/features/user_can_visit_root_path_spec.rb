@@ -11,7 +11,7 @@ describe "User can visit root path" do
   it "to search by author name" do
     visit root_path
     fill_in "author", with: 'Emily'
-    click_on "Get Poems"
+    click_button "Get Poems"
     expect(current_path).to eq(search_path)
 
     expect(page).to have_css('.poem', count: 10)
