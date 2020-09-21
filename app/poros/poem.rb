@@ -1,5 +1,5 @@
 class Poem
-  attr_reader :title, :author, :text, :linecount
+  attr_reader :title, :author, :text, :linecount, :tones
   def initialize(title, author, lines, linecount)
     @title = title
     @author = author
@@ -13,5 +13,8 @@ class Poem
   end
   def merge_lines(lines)
     lines.join(", ")
+  end
+  def set_tones(tone_obj)
+    @tones = tone_obj
   end
 end

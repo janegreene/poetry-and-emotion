@@ -7,5 +7,6 @@ RSpec.describe "Poetry Facade" do
     expect(response).to be_an(Array)
     expect(response[0]).to be_a(Poem)
     expect(response.length).to eq(10)
+    expect(response[0].tones[0].name).to be_a('Joy')
   end
 end

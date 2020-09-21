@@ -1,5 +1,5 @@
-class ToneService
-  def self.get_tone(lines)
+class ToneAnalyzerService
+  def self.sentiment_analysis(lines)
     url = "https://api.us-south.tone-analyzer.watson.cloud.ibm.com/instances/bd1ebbae-b02e-4f46-8fd8-31afb5c63c9a"
     conn = Faraday.new(url) do |connection|
       connection.basic_auth("apikey", ENV['ibm_api'])
@@ -12,6 +12,5 @@ class ToneService
     tones= json[:document_tone][:tones].map do |tone|
       tone[:tone_name]
     end
-    tones.pop
   end
 end
